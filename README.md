@@ -117,5 +117,5 @@ Overview of changes:
 - Replaced array() notation with []
 - Renamed $thisAmount to $totalPrice in the Customer class to make it's use easier to discern
 - Film class is now extended by three new classes: RegularFilm, NewReleaseFilm and ChildrensFilm. This implement an interface requiring  new function called 'getRentalPrice()' and 'getFrequentRenterPoints()'. This replaces the switch statement needed in Customer->getStatement() and is called via the Rental class.
-- Created a Statement Class to be injected into the Customer class
+- Created a Statement Class that Customer class is injected into for creating statements
 - Contents of Customer->getStatement moved into Statement class in which the Customer is passed and split into three functions handling data collecting and data formatting. $totalAmount and $frequentRenterPoints are now returned in the formatted string of the statement
